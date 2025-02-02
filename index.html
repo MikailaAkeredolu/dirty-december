@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- The document type declaration informs web browsers which version of HTML is being used  -->
+<html lang="en">
+  <!--  html signifies the beginning of the document, lang attribute specifies the language of the Web page -->
+  <!-- 
+
+meta: This tag provides metadata (data about data) for the HTML document. It doesn't display content directly on the page but gives instructions to the browser.
+
+name="viewport": The viewport is the user's visible area of a web page.
+
+content="width=device-width, initial-scale=1.0": 
+
+width=device-width: This sets the width of the viewport to the width of the device. This means the webpage will scale to fit the screen of any device, preventing horizontal scrolling.
+
+initial-scale=1.0: This sets the initial zoom level when the page is first loaded. 1.0 means 100% zoom, so the page will appear at its natural size without any zooming in or out.
+
+In short, this meta tag ensures that the webpage is responsive and adapts to different screen sizes, providing a consistent and optimal viewing experience across all devices. Without it, a website designed for a desktop might be too large or too small on a phone or tablet, requiring excessive zooming or scrolling.
+ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detty December</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Each encoded character will begin with an ampersand, &, and end with a semicolon, ; -->
+    <header class="container">
+      <h1>
+        <a href="index.html">
+            <img src="images/logoipsum-349.svg" alt="logo" width="50px">
+        </a>
+      </h1>
+      <h3 id="dates">December 15 &mdash; 31st</h3>
+    </header>
+
+    <nav id="top-nav" class="container">
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="venue.html">Venue</a>
+        <a href="register.html">Register</a>
+      </nav>
+
+    <section class="hero container">
+      <h2>Dedicated to IJGB people spending dollars</h2>
+      <p>
+        Every year, nigerians in diaspora descend on Lagos to party and have
+        fun.
+      </p>
+      <a class="btn btn-alt" href="register.html">Join Us</a>
+    </section>
+
+    <hr>
+    <br>
+
+    <div id="main-content" class="container">
+      <h3 style="font-weight: bold;">What Is Detty December ?</h3>
+      <p>
+        "Dirty December" is a slang term referring to a period of time,
+        typically the month of December, where individuals engage in more casual
+        all types of activities. It's often associated with a loosening of
+        social norms and increased opportunities for socializing during the
+        holiday season. The term implies a less restrictive approach to
+        relationships and intimacy compared to other times of the year.
+      </p>
+    </div>
+
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rn2djE3Vnww?si=_-DrjX-v0b4bcOb_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    </div>
+    <br>
+
+    <hr />
+
+    <section class="container">
+            <section class="spotlight">
+                <a href="artists.html">
+                <h3>Music: Afrobeats</h3>
+                </a>
+                <p>
+                Joinng us from all around the world are over twenty fatanstic artists,
+                here to perform in concerts.
+                </p>
+                <!-- <a class="btn btn-alt section-btn "  href="artists.html">Learn more</a> -->
+            </section>
+
+            <section class="spotlight">
+                <a href="schedule.html">
+                <h3>Events: 3 days of concerts</h3>
+                </a>
+                <p>
+                There will be concerts, parties, and other events happening all
+                through the month of December.
+                </p>
+                <!-- <a class="btn btn-alt section-btn "  href="schedule.html">Learn more</a> -->
+            </section>
+
+            <section class="spotlight">
+                <a href="venue.html">
+                <!-- <h5>Venues</h5> -->
+                <h3>Venue: The Lagos Arena</h3>
+                </a>
+                <p>
+                concerts and events will be happening all over Lagos, from the
+                mainland to the island.
+                </p>
+                <!-- <a class="btn btn-alt section-btn "  href="venue.html">Learn more</a> -->
+            </section>
+    </section>
+
+    <footer class="container">
+        <a href="index.html"> &copy;Dirty December | All rights reserved</a>
+    </footer>
+
+  </body>
+</html>

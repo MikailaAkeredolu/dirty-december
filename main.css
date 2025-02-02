@@ -1,0 +1,388 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+we can use the universal selector, *, along with universal pseudo-elements, *:before and *:after, 
+to select every imaginable element and change the box-sizing to border-box. 
+Remember, we’re going to want to include the necessary vendor prefixes for the box-sizing property, 
+as it is a relatively new property.
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Custom styles
+  Explanation of font: 300 16px/22px;
+
+This CSS declaration sets the font properties for an element. Let's break it down:
+
+font: 300 16px/22px; is a shorthand property that combines several font properties.
+
+300: This is the font-weight. It specifies the boldness or thickness of the font. 300 represents a light weight. (100 is thinnest, 900 is boldest. 400 is normal.)
+
+16px: This is the font-size. It sets the size of the text to 16 pixels.
+
+/22px: This is the line-height. It sets the vertical spacing between lines of text to 22 pixels. The line height is relative to the font size; in this case, it's 22/16 = 1.375 times the font size.
+
+In essence, this line of CSS sets the font to a light weight, 16 pixels in size, with 22 pixels of vertical spacing between lines.
+  ========================================
+*/
+body {
+    color: #888;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+
+    background:#cbe2c1;
+    background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+    background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+    background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+  }
+
+/*
+
+Block-level elements begin on a new line, stacking one on top of the other
+Inline-level elements fall into the normal flow of a document, only maintain the width of their content
+Margins only work horizontally—left and right—on inline-level elements
+*/
+
+
+
+/*
+  ========================================
+Class  Container
+ Setting a width tells the browser definitively how wide any element 
+ with the class of container should be. Using a left and right margin of auto 
+ in conjunction with this width lets the browser automatically figure out 
+ equal left and right margins for the element
+  ========================================
+*/
+
+.container{
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 960px;
+    overflow: hidden;/* clearfix hack to clear the floats within the container. A clearfix is a simple technique to force a parent element to contain its floated children. */
+}
+
+/*
+  ========================================
+Typography
+   let’s create some vertical spacing between elements. 
+   For starters let’s place a 22-pixel bottom margin 
+   on a few of our heading and paragraph elements
+  ========================================
+*/
+
+h1, h3, h4, h5, p {
+    margin-bottom: 22px;
+}
+
+/* Font Colors */
+h1, h2, h3, h4 {
+    color: #648880;
+}
+
+/* Font Sizes */
+  h1 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 10px;
+  }
+
+  /* Google-fonts with Text-shadow explanation on h2:
+    3px: Horizontal offset (moves the shadow 3 pixels to the right). A negative value would move it left.
+    6px: Vertical offset (moves the shadow 6 pixels down). A negative value would move it up.
+    2px: Blur radius (makes the shadow softer; a larger value creates a more blurred, softer shadow). A value of 0 would produce a sharp shadow.
+    rgba(0, 0, 0, .1): This specifies the color of the shadow using RGBA (Red, Green, Blue, Alpha).
+    0, 0, 0: Represents black (R=0, G=0, B=0).
+    .1: The alpha value (transparency). 0 is completely transparent, and 1 is completely opaque. .1 makes the shadow very light and subtly visible.
+    In summary, this code adds a slightly blurry, light gray shadow to the text, offset 3 pixels to the right and 6 pixels down.
+ */
+  h2 {
+    font-size: 24px;
+    line-height: 44px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 3px 6px 2px rgba(0, 0, 0, .1);
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 21px;
+    margin-top: 20px;
+    
+  }
+
+  #dates{
+    color:#fff;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5{
+    color: #a9b2b9;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+/*
+   ========================================
+Header
+ float h1 left and h3 to the right
+   ========================================
+*/
+
+header{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding: 20px;
+    background-image: url('/images/dirtydec.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+header h1 {
+    float: left;
+}
+
+header h3 {
+    float: right;
+}
+
+/* clear floats */
+nav{
+    clear: both;
+    text-align: center;
+    width: 960px;
+    
+}
+
+#top-nav{
+    background-color: #648880;
+    padding: 10px 0;
+
+
+}
+
+#top-nav a{
+  color: white;
+  font-weight: bold;
+  
+  
+}
+
+#top-nav a:hover{
+    color: orange;
+   
+  }
+
+a{
+    color: #648880;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a:hover {
+    color: orange;
+  }
+
+#main-content{
+    text-align: center; 
+    margin-top: -50px;
+}
+
+/*
+    ========================================
+ Hero 
+    let’s also add a bit of padding to the <section> element
+    that contains our <a> element with the classes of btn and btn-alt. 
+    We’ll do so by adding a class attribute value of hero to
+    the <section> element, alongside the container class attribute value
+    ========================================
+*/
+
+.hero {
+    padding: 20px 80px 36px 80px;
+    
+  }
+
+.hero h2{
+    text-align: center;
+    color: #648880;
+}
+
+.hero p{
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.hero a{
+    text-align: center;
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    background-color: #648880;
+    color: #fff;
+}
+
+.hero a:hover{
+    background-color: orange;
+}
+
+/*
+  ========================================
+  Buttons
+   let’s add the btn class and apply some common styles that can be shared across all buttons. 
+   We’ll want all of our buttons to have a 5-pixel border-radius. 
+   They should be displayed as inline-block elements 
+   so we can add padding around all four sides without issue; 
+   we’ll remove any margin.
+  ========================================
+*/
+
+.btn {
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0;
+ }
+
+  /*
+    ========================================
+    We’ll also want to include styles specific to this button,
+    which we’ll do by using the btn-alt class. 
+    Here we’ll add a 1-pixel, solid, gray border 
+    with 10 pixels of padding on the top and bottom 
+    of the button and 30 pixels of padding on the 
+    left and right of the button.
+    ========================================
+    */
+.btn-alt {
+    border: 1px solid #dfe2e5;
+    padding: 10px 30px;
+}
+
+
+.video{
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: rgb(204, 209, 204);
+    margin-bottom: 30px;
+    width: 960px;
+}
+
+
+/*
+    ========================================
+   Positioning
+    One way to position elements on a page is with the float property
+    When the float property is used on multiple elements at the same time,
+    it provides the ability to create a layout by floating elements
+    directly next to or opposite each other
+    The float property relies on an element having a display value of block,
+    and may alter an element’s default display value if it is not
+    already displayed as a block-level element.
+
+    To prevent content from wrapping around floated elements,
+     we need to clear the float with the clear property
+    ========================================
+*/
+
+.container section{
+    width: 33.33%;
+    float: left;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    box-sizing: border-box; /* Include padding and border in width */
+   margin-bottom: 30px;
+   margin-top: -40px;
+}
+
+.section-btn {
+    border: 1px solid green;
+}
+
+.spotlight {
+    margin-top: 30px, 0, 30px, 0;
+}
+
+.spotlight p{
+    margin-top: -30px;
+}
+
+footer{
+    clear: both;
+    padding: 30px;
+    text-align: center;
+    background-color: #648880;
+   
+}
+
+footer a{
+    color: white;
+}
